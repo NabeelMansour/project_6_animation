@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+/* nav section */
+
+.nav {
+  height: 5rem;
+  background: #222;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.nav-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.animate__infinite {
+  animation-duration: 1.5s;
+}
+
+.nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/* hero section */
+
+.hero {
+  min-height: calc(100vh - 5rem);
+  background: rgb(105, 62, 27);
+  position: relative;
+}
+
+.hero-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 5rem 0;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-center h1 {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+}
+
+.hero-center p {
+  max-width: 35em;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  animation: move-down 5s ease-in-out 1;
+}
+
+.hero-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 0.75rem 1.25rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  animation: move-up 5s ease-in-out 1;
+}
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background:
+      linear-gradient(to right, rgba(105, 62, 27, 0.5), rgba(105, 62, 27, 1)),
+      url("images/download.jpg") center/cover;
+  }
+}
+
+/* animation rules */
+
+@keyframes move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-up {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
